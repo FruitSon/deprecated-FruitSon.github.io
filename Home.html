@@ -1,0 +1,293 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>IFE Task2</title>
+<!--   <link rel="stylesheet" href="task2.css">
+ -->  
+  <style type="text/css">
+
+  	body { 
+  		background-color: #ccc;
+  		padding: 20px;
+  		padding-top: 100px;
+  	}
+  	
+  	nav {
+  		padding-left: 20px;
+  		position:fixed; /* 绝对定位，fixed是相对于浏览器窗口定位。 */
+  		background-color: black;
+		top:0; /* 距离窗口顶部距离 */
+		left:0; /* 距离窗口左边的距离 */
+		width: 100%;
+		height: 80px; /* 高度 */
+		z-index:99; /* 层叠顺序，数值越大就越高。页面滚动的时候就不会被其他内容所遮挡。 */
+  	}
+
+  	nav a{
+  		color:white;
+  		font-size: 14px;
+  	}
+  	h1 {
+  		float: left;
+  		color: white;
+  	}
+  	#navwrap {
+  		position: fixed;
+  		right: 0px;
+  	}
+  	#nav li{
+  		color: white;
+  		padding:10px 0px;
+  		margin-right: 20px;
+  		margin-left: 5px;
+  		float:left;
+  	}
+  	section {
+  		border:  outset 1px;
+  		background-color: white;
+  		padding: 20px;
+  		margin: 10px 0px;
+  	}
+/*  	.ig:before{
+  		color: navy;
+  		content: "To victory! - da·中二·lek";
+  	}*/
+  	.ig {
+  		border:  solid 1px grey;
+  		padding: 8px;
+  	}
+  	h3, .author {
+  		color:grey;
+  	}
+  	button {
+  		border: transparent;
+  		border-radius: 5px;
+  		background:#aaa;
+  		height: 30px;
+  		width: 100%;
+  		font-size: 18px;
+  	}
+  	#sidebar {
+  		float: right;
+  		position: absolute;
+
+  		height: 450px;
+  		width: 400px;
+  		top: 108px;
+  		right: 20px;
+  		margin-left: auto;
+
+  	}
+  	
+  	#container2 {
+  		float:left;
+  		width: auto;
+  		margin-right: 460px;
+  		position: relative;
+  		overflow: auto;
+   	}
+   	
+  	#table {
+  		width: 100%;
+  		text-align: left;
+  		border:dashed;
+  	}
+  	#table tr th {
+  		color: white;
+  		background-color: black;
+  		padding-left: 10px;
+
+  	}
+  	#table td{
+  		border:solid 1px grey;
+  		border-width: 0px,1px,1px,0px;
+  		padding-left: 10px;
+  		border-collapse:separate;
+  		border-spacing: 0px,0px,0px,0px;
+  	}
+  	#table tr:last-child {background-color: #ccc}
+
+
+  	#sidebar h2 {
+		border-left: solid 3px black;
+	}
+	#register tr td:first-child {
+		text-align: right;
+		vertical-align: top;
+		padding-right: 10px;
+		width: 300px;
+	}
+	#register tr td:first-child ~ td{
+		text-align: left;
+		vertical-align: top;
+		padding-left: 10px;
+		width: auto;
+	}
+  	#footer {
+		text-align: center;
+  	}
+
+  	
+  </style>
+</head>
+<body>
+	<nav>
+		<h1>今天试着做一个简单页面</h1>
+		<div id = "navwrap">
+		<ul id = "nav" style = "list-style-type : circle">
+			<li><a href="#s1">跳转第一篇文章</a></li>
+			<li><a href="#s2">跳转第二篇文章</a></li>
+			<li><a href="#s3">跳转图片</a></li>
+			<li><a href="#s4">跳转第三篇文章</a></li>
+		</ul>
+		</div>
+	</nav>
+
+<div id = "container">
+	<div id = "container2">
+	<span id="s1" name="s1"></span>
+	<section class = "article">
+		<h2>这里是一篇文章的标题</h2>
+		<h3>这里是一篇文章的二级标题</h3>
+		<p class = "author">author date</p>
+		<p>百度前端技术学院的课程任务是由百度前端工程师专为对前端不同掌握程度的同学设计。我们尽力保证课程内容的质量以及学习难度的合理性，但即使如此，真正决定课程效果的，还是你的每一次思考和实践。课程多数题目的解决方案都不是唯一的。<a href="http://ife.baidu.com/task/all"><em>一个偷偷摸摸的链接 </em></a>这和我们在实际工作中的情况也是一致的。因此，我们的要求不仅仅是实现设计稿的效果，更是要多去思考不同的解决方案，评估不同方案的优劣，然后使用在该场景下最优雅的方式去实现。那些最终没有被我们采纳的方案，同样也可以帮助我们学到很多知识。所以，我们列出的参考资料未必是实现需求所必须的。有的时候，实现题目的要求很简单，甚至参考资料里就有，但是背后的思考和亲手去实践却是任务最关键的一部分。在学习这些资料时，要多思考，多提问，多质疑。相信通过和小伙伴们的交流，能让你的学习事半功倍。
+		</p>
+		<img src="test.jpg" height = "200">
+		<p>百度前端技术学院的课程任务是由百度前端工程师专为对前端不同掌握程度的同学设计。我们尽力保证课程内容的质量以及学习难度的合理性，但即使如此，真正决定课程效果的，还是你的每一次思考和实践。
+		</p>
+	</section>
+
+	<span id="s2" name="s222"></span>
+	<section class = "article">
+		<h2>这里是又一篇文章的标题</h2>
+		<h3>这里是又一篇文章的二级标题</h3>
+		<p class = "author">author date</p>
+		<p>百度前端技术学院的课程任务是由百度前端工程师专为对前端不同掌握程度的同学设计。我们尽力保证课程内容的质量以及学习难度的合理性，但即使如此，真正决定课程效果的，还是你的每一次思考和实践。课程多数题目的解决方案都不是唯一的。<a href="http://ife.baidu.com/task/all"><em>一个偷偷摸摸的链接 </em></a>这和我们在实际工作中的情况也是一致的。因此，我们的要求不仅仅是实现设计稿的效果，更是要多去思考不同的解决方案，评估不同方案的优劣，然后使用在该场景下最优雅的方式去实现。那些最终没有被我们采纳的方案，同样也可以帮助我们学到很多知识。所以，我们列出的参考资料未必是实现需求所必须的。有的时候，实现题目的要求很简单，甚至参考资料里就有，但是背后的思考和亲手去实践却是任务最关键的一部分。在学习这些资料时，要多思考，多提问，多质疑。相信通过和小伙伴们的交流，能让你的学习事半功倍。
+		</p>
+		<img src="test.jpg" height = "200">
+		<p>百度前端技术学院的课程任务是由百度前端工程师专为对前端不同掌握程度的同学设计。我们尽力保证课程内容的质量以及学习难度的合理性，但即使如此，真正决定课程效果的，还是你的每一次思考和实践。
+		</p>
+		<ul>
+			<li>列表项目一</li>
+			<li>列表项目二</li>
+			<li>列表项目三</li>
+		</ul>
+	</section>
+
+	<span id="s3" name="s3"></span>
+	<section class = "article">
+		<h2>图片</h2>
+		
+		<img class = "ig" src="test.jpg" height = "50">
+		<img class = "ig" src="test.jpg" height = "50">
+		<img class = "ig" src="test.jpg" height = "50">
+		<img class = "ig" src="test.jpg" height = "50">
+		<img class = "ig" src="test.jpg" height = "50">
+		<img class = "ig" src="test.jpg" height = "50">
+		<img class = "ig" src="test.jpg" height = "50">
+		<img class = "ig" src="test.jpg" height = "50">
+		<img class = "ig" src="test.jpg" height = "50">
+		<img class = "ig" src="test.jpg" height = "50">
+	</section>
+
+	<span id="s4" name="s4"></span>
+	<section class = "article">
+		<h2>最后竟然还有一篇文章</h2>
+		<p class = "author">author date</p>
+		<ol>
+			<li>我是老大</li>
+			<li>我是第二</li>
+			<li>我是拉呱名</li>
+
+		</ol>
+		<p>除此还有一些表格数据</p>
+		<table id = "table">
+			<tr>
+				<th>表头1</th>
+				<th>表头2</th>
+				<th>表头3</th>
+			</tr>
+			<tr>
+				<td>表内单元格</td>
+				<td>表内单元格</td>
+				<td>操作</td>
+			</tr>
+			<tr>
+				<td>表内单元格</td>
+				<td>表内单元格</td>
+				<td>操作</td>
+			</tr>
+			<tr>
+				<td>表内单元格</td>
+				<td>表内单元格</td>
+				<td>操作</td>
+			</tr>
+			<tr>
+				<td>总计</td>
+				<td colspan="2">&nbsp;</td>
+			</tr>
+		</table>
+	</section>
+	</div>
+	<section id = "sidebar">
+	<h2>&nbsp;侧栏窗口标题</h2>
+
+	<table id = "register">
+		<tr>
+			<td>请输入邮箱地址</td>
+			<td>
+				<input plaeholder = "这是一个文本输入框">
+				<br>请输入邮箱地址
+			</td>
+
+		</tr>
+			<td>请输入密码</td>
+			<td><input placeholder = "请输入密码"></td>
+		<tr>
+		</tr>
+			<td>请重复输入密码</td>
+			<td>
+				<input placeholder = "请重复输入密码">
+				<br>密码请为6-16位英文数字
+			</td>
+		<tr>
+		</tr>
+			<td>性别</td>
+			<td><input type="radio" checked="checked" name="Sex" value="male" />男  <input type="radio" name="Sex" value="female" />女</td>
+		<tr>
+		</tr>
+			<td>城市</td>
+			<td>
+				<form>
+					<select name="城市">
+					<option value="首都" selected = "selected">首都</option>
+					<option value="首都以外地区-北方" selected = "selected">首都以外地区-北方</option>
+					<option value="首都以外地区-南方" selected = "selected">首都以外地区-南方</option>
+					</select>
+				</form>
+			</td>
+		<tr>
+		</tr>
+			<td>爱好</td>
+			<td>
+				<input type = "checkbox", name = "hobbies", value =""> 运动    
+				<input type = "checkbox", name = "hobbies", value =""> 音乐    
+				<input type = "checkbox", name = "hobbies", value =""> 阅读  
+			</td>
+		<tr>
+		</tr>
+			<td>个人描述</td>
+			<td><textarea name="pd" style="width:250px;height:80px;" placeholder="这是多行输入框"></textarea></td>
+		<tr>
+	</table>
+	<br><button>确认提交</button>
+</section>
+</div>
+
+<div id = "footer"><p>written by 蛋饼铺</p></div>
+<div id = "footer2"></div>
+
+</body>
+
+</html>
