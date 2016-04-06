@@ -1,26 +1,33 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
+  <link rel='icon' href='ruizhen.ico'> 
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
   <title>Ruizhen's Portfolio</title>
-  <script src="js/modernizr.custom.js"></script>
+  <script type="text/javascript" src = "jquery-1.12.2.min.js"></script>
   <style type="text/css">
-  	body { 
-  		background-color: #fff;
-  		padding: 20px;
-  		padding-top: 100px;
-  	}
+	html, body { 
+		width: 100%;  
+		font: 16px/1.5 "Microsoft YaHei", Helvetica, STHeiti STXihei, Microsoft JhengHei, Arial;
+	}
+	#pageContain {
+		width: 100%;
+		height: 100%;
+	}
   	/*headings*/
   	h1 {
   		float: left;
   		color: white;
+  		vertical-align: middle;
   	}
 
-  	/*navigation bar*/
+  	/*navigation*/
   	nav {
   		padding-left: 20px;
   		position:fixed; /* 绝对定位，fixed是相对于浏览器窗口定位。 */
-  		background-color: black;
+  		background-color: rgba(0,0,0,0.8);
 		top:0; /* 距离窗口顶部距离 */
 		left:0; /* 距离窗口左边的距离 */
 		width: 100%;
@@ -30,91 +37,221 @@
   	nav a{
   		color:white;
   		font-size: 14px;
+  		text-decoration:none;
   	}
-  	#navwrap {
+  	.nav {
   		position: fixed;
   		right: 0px;
+  		list-style-type: square;
+
   	}
-  	#nav li{
+  	.nav li{
   		color: white;
   		padding:10px 0px;
-  		margin-right: 20px;
+  		margin-right: 40px;
   		margin-left: 5px;
   		float:left;
   	}
-  	/*project*/
-  	.ig {
-  		height: 200px;
-  		margin: 20px;
+
+  	/*nav bar*/
+	#navBar { 
+		z-index: 3; 
+		position: absolute; 
+		top: 40%; 
+		right: 3%;
+	}
+	#navBar .active { 
+		background: black;
+	}
+	#navBar li { 
+		cursor: pointer; 
+		margin-bottom: 10px; 
+		transition: all .7s ease; 
+		border-radius: 50%; 
+		line-height: 40px; 
+		width: 10px; 
+		height: 10px;
+		list-style-type: none;
+	}
+
+
+  	/*page content*/
+  	.page {
+  		background-color: white;
+  		margin: 0 auto;
   	}
 
-  	.single {
-  		padding-left: 50px;
-  		padding-right: 50px;
+	#p1 { 
+		height: 400px;
+		/*background: url(test.jpg);*/
+		vertical-align: middle;
+		background-repeat: no-repeat;
+		padding-bottom: 10%;
+	}
+	
+	#p2 {
+		width: 100%;
+		height: 600px;
+		background-color:red; 
+		padding: 200px auto;
+		padding-top:200px;
+
+
+	}
+	#p2 table {
+		margin: 0 auto;
+		padding-top:160px;
+		vertical-align: middle;
+	}
+	#p2 table tr {
+		width:auto;
+		text-align:center;
+		vertical-align:middle;
+	}
+	.p2txt {
+		text-align:center; 
+		font-size:15px; 
+		color:black;
+		width:100%;
+	}
+	.p2 b {
+		color: yellow;
+	}
+
+	#p3 {
+		margin: 0 auto;
+	}
+	.grid {
+		width: 730px;
+		margin: 20px auto;
+
+	}
+	.ig {
+  		height: 200px;
+  		margin: 20px;
+  	}	
+
+  	#p4 {
+  		width: auto;
+  		height: 100px;
+  		background-color: black;
+  		text-align: center;
+  		margin-top:200px;
+  		padding-top: 10px;
+  		padding-bottom: 20px;
+  		line-height: 0;
   	}
-  	/*single page*/
-  	#portfolio {
-  		margin-left: 10px;
-  		margin-right: 10px;
+
+  	/*segement line*/
+  	.line {
+  		padding: 0 20px;
+    	margin: 20px 0;
+    	line-height: 1px;
+    	border-left: 200px solid black;
+    	border-right: 200px solid black;
+    	text-align: center;
   	}
-  </style>
+
+  	/*font*/
+  	.b-t {
+  		font-size: 50px; 
+  		color: black; 
+  		text-align: center;
+  	}
+  	.s-t {
+		color:black;
+		font-size:15px;
+		text-align:center;
+  	}
+	.txt { 
+		font-size: 50px; 
+		color: black; 
+		text-align: center;
+	}
+	.b-p {
+
+
+	}
+	.s-p {
+		color:black;
+		margin-top: 20%;
+		font-size:15px;
+		letter-spacing:4px;
+		word-spacing:2px;
+		text-align:center;
+	}
+</style>
 </head>
 
 <body>
 <nav>
-	<img src="">
-	<h1>Ruizhen Guo</h1>
-	<div id = "navwrap">
-		<ul id = "nav" style = "list-style-type : circle">
-			<li><a href="#archor1">Home</a></li>
-			<li><a href="#archor2">Portfolio</a></li>
-			<li><a href="#archor3">Resume</a></li>
-			<li><a href="#archor4">ForFun</a></li>
-		</ul>
-	</div>
+	<a href="index.html"><h1><img src="test.jpg" style =  "padding-left: 20px;height:40px;align:absmiddle"></h1></a>
+	<a href="index.html"><h1 style = "padding-left:20px;font-size:25px">RUIZHEN GUO</h1></a>
+	<ul class = "nav">
+		<li><a href="index.html">Home</a></li>
+		<li><a href="project/portfolio.html">Portfolio</a></li>
+		<li><a href="cv.pdf">Resume</a></li>
+		<li><a href="fun/fun.html">ForFun</a></li>
+	</ul>
 </nav>
 
-	<span id="archor1"></span>
-	<section class = "single" id = "home">
-	</section>
-
-	<span id="archor2"></span>
-	<section class = "single" id = "portfolio" >
-		<h2>图片</h2>
-
-		<img class = "ig" src="test.jpg" >
-		<img class = "ig" src="test.jpg" >
-		<img class = "ig" src="test.jpg" >
-		<img class = "ig" src="test.jpg" >
-		<img class = "ig" src="test.jpg" >
-		<img class = "ig" src="test.jpg" >
-		<img class = "ig" src="test.jpg" >
-		
-	</section>
+<div id = "pageContain">
+	<span id="s1" style ="color:black">sss</span>
+	<div id="p1">
+			<div class = "s-p">Welcome:) Thanks for stopping by.</div>
+			<div class = "s-p" style = "color:black;margin-top: 20px;font-size:15px">Here is Ruizhen .</div>
+	</div>
 	
-
-	<span id="archor3"></span>
-	<section class = "single" id = "resume">
-	</section>
-
-	<span id="archor4"></span>
-	<section class = "single" id = "fun">
-	</section>
-
-	<div>
-		<div class = "icons">
-			<ul>
-				<li><a href = "www.baidu.com" target = "_blank">da</li>
-				<li><a href = "www.baidu.com" target = "_blank"</li>
-				<li><a href = "www.baidu.com" target = "_blank"</li>
-			</ul>
+	<span id="s2" style ="color:black">sss</span>
+	<div id = "p2">
+		<table>
+			<tr>
+				<p class = "b-t" style = "line-height:0">I AM A _____.</p>
+				<p class = "s-t" ><br>designing UX/UI for web and mobile apps</p>
+			</tr>
+			<tr>
+				<p class = "p2txt">
+				<br>&nbsp;&nbsp;&nbsp;- Creative and responsive UX/UI designer
+				<br>&nbsp;&nbsp;&nbsp;- CS student with prior experience in Industry Design and Psychology
+				<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pursuing a Master Degree in CS - Digital Arts at Dartmouth College.
+				<br>&nbsp;&nbsp;&nbsp;- Effective learner with a unsatisfied heart of curiosity.
+				<br>&nbsp;&nbsp;&nbsp;- A big fan of films and zentangle art.</p>
+			</tr>
+			<tr>
+				<p class = "p2txt">
+				<br>Actively seeking for summer UX/UI internship opportunities! Check my <b>portfolio</b> and <b>resume</b> :)
+				<br>Feel free to <b>drop me a line</b> if you are interested in working with me or have any ideas to share. 
+			</p>
+			</tr>
+		</table>
+	</div>
+	
+	<span id="s3" style="color:black">sss</span>
+	<div id = "p3">
+		<p class="s-p" style = "margin-top:100px;">PORTFOLIO</p>
+		<div class = "grid">
+			<a href="project/intersection.html"><img class = "ig" src="test.jpg" ></a>
+			<img class = "ig" src="test.jpg" >
+			<img class = "ig" src="test.jpg" >
+			<img class = "ig" src="test.jpg" >
+			<img class = "ig" src="test.jpg" >
+			<img class = "ig" src="test.jpg" >
+			<img class = "ig" src="test.jpg" >
+			<img class = "ig" src="test.jpg" >
+			<img class = "ig" src="test.jpg" >
+			<img class = "ig" src="test.jpg" >
+			<img class = "ig" src="test.jpg" >		
 		</div>
-		<div class = "copyright">
-			<p>Designed and written by Ruizhen Guo, 2016</p>
-		</div>
-
 	</div>
 
-</body>
+	<div id = "p4">
+		<p> <img src="test.jpg" width = "20px">&nbsp;&nbsp;&nbsp;&nbsp;<img src="test.jpg" width = "20px">&nbsp;&nbsp;&nbsp;&nbsp;<img src="test.jpg" width = "20px"></p>
+		<br>
+		<p style = "color:white">Designed and written by Ruizhen Guo.  All Rights Reserved.</p>
+	</div>
 
+</div>
+
+
+</body>
 </html>
